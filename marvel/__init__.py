@@ -92,11 +92,6 @@ else:
     except ValueError:
         raise Exception("Your support users list does not contain valid integers.")
 
-    try:
-        WHITELIST_USERS = set(int(x) for x in Config.WHITELIST_USERS or [])
-    except ValueError:
-        raise Exception("Your whitelisted users list does not contain valid integers.")
-
     WEBHOOK = Config.WEBHOOK
     URL = Config.URL
     PORT = Config.PORT
